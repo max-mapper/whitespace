@@ -1,10 +1,13 @@
 {
   "name": "whitespace",
   "version": "1.0.0",
-  "description": "remove extra whitespace from javascript files on the command line",
+  "description": "remove trailing whitespace from text files on the command line",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
+  },
+  "bin": {
+    "whitespace": "cli.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/maxogden/whitespace/issues"
   },
-  "homepage": "https://github.com/maxogden/whitespace"
+  "homepage": "https://github.com/maxogden/whitespace",
+  "dependencies": {
+    "detect-newline": "^1.0.3"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  }
 }
