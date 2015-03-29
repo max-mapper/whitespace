@@ -14,6 +14,10 @@ npm install whitespace -g
 
 ### usage
 
+pass a filename or list of filenames as arguments and whitespace will remove trailing whitespace and update them in-place
+
 ```
-whitespace file.js > file.js
+whitespace file.js
+# or
+whitespace *.js
 ```
