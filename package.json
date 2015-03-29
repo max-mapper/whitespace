@@ -1,6 +1,6 @@
 {
   "name": "whitespace",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "remove trailing whitespace from text files on the command line",
   "main": "index.js",
   "scripts": {
