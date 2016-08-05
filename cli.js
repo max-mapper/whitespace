@@ -1,15 +1,26 @@
 #!/usr/bin/env node
 var trim = require('./')
 var fs = require('fs')
+var glob = require('glob')
+var isGlob = require('is-glob')
 
 if (process.argv.length === 2) {
-  console.error('Usage: whitespace <files>')
+  console.error('Usage: whitespace <path or glob>')
   process.exit(1)
 }
 
-var files = process.argv.slice(2)
+var input = process.argv[2]
 
-files.map(function each (f) {
-  var file = fs.readFileSync(f)
-  fs.writeFileSync(f, trim(file))
-})
+if (isGlob(input)) {
+  glob(input, function (er, files) {
+    files.forEach(function(f) {
+      var file = fs.readFileSync(f)
+      fs.writeFileSync(f, trim(file))
+    })
+  })
+}
+
+else {
+  var file = fs.readFileSync(input)
+  fs.writeFileSync(input, trim(file))
+}

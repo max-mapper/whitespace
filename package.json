@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/maxogden/whitespace",
   "dependencies": {
-    "detect-newline": "^1.0.3"
+    "detect-newline": "^1.0.3",
+    "glob": "^7.0.5",
+    "is-glob": "^2.0.1"
   },
   "devDependencies": {
     "tape": "^3.5.0"
